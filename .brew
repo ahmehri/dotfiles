@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# update hombrew
+brew update
+
+# upgrade formulae
+brew upgrade
+
+# git completion
+brew install git bash-completion
+
+# clean
+brew cleanup
+
