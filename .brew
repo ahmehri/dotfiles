@@ -9,6 +9,9 @@ brew upgrade
 # git completion
 brew install git bash-completion
 
+# http cli
+brew install httpie
+
 # clean
 brew cleanup
 
