@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git yarn)
+plugins=(git yarn kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,9 +104,12 @@ if [ -f '/Users/ahmehri/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ahmehri
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ahmehri/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ahmehri/google-cloud-sdk/completion.zsh.inc'; fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completionw
-
 # kubectl autocompletion
 source <(kubectl completion zsh)
+export PATH="/usr/local/opt/helm@2/bin:$PATH"
+
+# z.sh
+. ~/z.sh
+
+# fnm
+eval "$(fnm env --multi --use-on-cd)"
