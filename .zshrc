@@ -68,7 +68,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git yarn kubectl alias-finder)
+plugins=(git yarn kubectl alias-finder chucknorris fzf zsh-completions)
+# reload the completion
+autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,3 +115,11 @@ export PATH="/usr/local/opt/helm@2/bin:$PATH"
 
 # fnm
 eval "$(fnm env --multi --use-on-cd)"
+
+# plugin cannot be configured using ohmyzsh style and it has to be done this
+# way
+source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+# only for git
+zstyle ':completion:*:*:git' fzf-search-display true
+# or for everything
+zstyle ':completion:*' fzf-search-display true
