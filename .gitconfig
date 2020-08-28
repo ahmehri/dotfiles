@@ -1,10 +1,15 @@
 [user]
 	name = ahmehri
-	email = ahmed.elmehri@gmail.com
 [alias]
 	lg = log --oneline --graph --decorate
 	lga = log --oneline --graph --decorate --all
-	wip = commit -m wip
+	#wip = "!f(){ git commit --no-verify -m \"$1 [wip]\"; }; f"
+        wip = commit -am wip --no-verify
+	amend = commit -a --amend --no-edit
+	amendnv = commit -a --amend --no-edit --no-verify
+	amends = commit --amend --no-edit --no-verify
+	lghm = log --oneline --graph --decorate @ origin/master master
+	amendnv = commit -a --amend --no-edit --no-verify
 [fetch]
 	prune = true
 [core]
@@ -26,3 +31,5 @@
 	whitespace = red reverse
 [branch]
 	autosetuprebase = always
+[oh-my-zsh]
+	hide-status = 1
