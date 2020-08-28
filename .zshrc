@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git yarn kubectl alias-finder chucknorris fzf zsh-completions)
+plugins=(git yarn kubectl alias-finder chucknorris fzf zsh-completions zsh-autosuggestions)
 # reload the completion
 autoload -U compinit && compinit
 
