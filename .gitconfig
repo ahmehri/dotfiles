@@ -3,8 +3,8 @@
 [alias]
 	lg = log --oneline --graph --decorate
 	lga = log --oneline --graph --decorate --all
-	#wip = "!f(){ git commit --no-verify -m \"$1 [wip]\"; }; f"
-        wip = commit -am wip --no-verify
+        wip = commit -m wip --no-verify
+        wipa = commit -am wip --no-verify
 	amend = commit -a --amend --no-edit
 	amendnv = commit -a --amend --no-edit --no-verify
 	amends = commit --amend --no-edit --no-verify
