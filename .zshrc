@@ -110,11 +110,11 @@ if [ -f '/Users/ahmehri/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/a
 source <(kubectl completion zsh)
 export PATH="/usr/local/opt/helm@2/bin:$PATH"
 
-# z.sh
-. ~/z.sh
+# zoxide
+eval "$(zoxide init zsh)"
 
 # fnm
-eval "$(fnm env --multi --use-on-cd)"
+eval "$(fnm env --use-on-cd)"
 
 # plugin cannot be configured using ohmyzsh style and it has to be done this
 # way
