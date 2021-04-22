@@ -82,11 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='code'
+else
+  export EDITOR='code'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -99,12 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ahmehri/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ahmehri/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ahmehri/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ahmehri/google-cloud-sdk/completion.zsh.inc'; fi
 
 # kubectl autocompletion
 source <(kubectl completion zsh)
@@ -123,3 +117,11 @@ source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion
 zstyle ':completion:*:*:git' fzf-search-display true
 # or for everything
 zstyle ':completion:*' fzf-search-display true
+
+export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ahmehri/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ahmehri/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ahmehri/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ahmehri/google-cloud-sdk/completion.zsh.inc'; fi
