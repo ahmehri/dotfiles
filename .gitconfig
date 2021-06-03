@@ -3,13 +3,12 @@
 [alias]
 	lg = log --oneline --graph --decorate
 	lga = log --oneline --graph --decorate --all
-        wip = commit -m wip --no-verify
-        wipa = commit -am wip --no-verify
-	amend = commit -a --amend --no-edit
-	amendnv = commit -a --amend --no-edit --no-verify
-	amends = commit --amend --no-edit --no-verify
+  wip = commit -am wip --no-verify
+	amend = commit --amend --no-edit
+	amenda = commit -a --amend --no-edit
+	amendnv = commit --amend --no-edit --no-verify
+	amendanv = commit -a --amend --no-edit --no-verify
 	lghm = log --oneline --graph --decorate @ origin/master master
-	amendnv = commit -a --amend --no-edit --no-verify
 [fetch]
 	prune = true
 [core]
@@ -29,7 +28,7 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
-[branch]
-	autosetuprebase = always
 [oh-my-zsh]
 	hide-status = 1
+[pull]
+	rebase = true
