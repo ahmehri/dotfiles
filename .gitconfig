@@ -32,3 +32,5 @@
 	hide-status = 1
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true
